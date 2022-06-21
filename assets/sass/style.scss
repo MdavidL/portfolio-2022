@@ -1,3 +1,10 @@
 *, body {
-    background-color: red;
+    background-color: rgb(51, 255, 0);
 }
+
+.header {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  }
