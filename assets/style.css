@@ -17,6 +17,7 @@ main {
   z-index: 0;
 }
 
+/*Partie header*/
 .header {
   display: flex;
   flex-direction: column;
@@ -56,31 +57,38 @@ main {
   transition: 0.8s ease-out;
 }
 
-.profile {
+/*Partie main*/
+/*Profil*/
+.profile, .career {
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  z-index: 1;
 }
 
 .profile .profile__elements {
   position: absolute;
-  width: 60%;
-  margin-bottom: 10rem;
+  width: 50%;
+  top: 0;
+  margin-top: 13rem;
 }
 .profile .profile__elements h2 {
   font-size: 30px;
   margin-bottom: 5rem;
 }
+.profile .profile__elements p {
+  margin-top: 5rem;
+}
 
 .profile .profile__links {
   position: fixed;
-  margin-top: 50rem;
+  bottom: 0;
+  margin-bottom: 5rem;
   display: flex;
   flex-direction: row;
+  z-index: 2;
 }
 
 .profile .profile__links--network {
@@ -88,31 +96,46 @@ main {
   margin: 1rem;
 }
 
-.career {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  z-index: 0;
+/*Parcours*/
+.career h2 {
+  position: absolute;
+  font-size: 30px;
+  top: 0;
+  margin-top: 12rem;
 }
 
 .career .career__elements {
   position: absolute;
-  width: 60%;
-  margin-bottom: 10rem;
-}
-.career .career__elements h2 {
-  font-size: 30px;
-  margin-bottom: 5rem;
+  width: 50%;
+  height: 50%;
+  overflow-y: scroll;
 }
 
-.career .career__elements--piscine {
-  text-align: center;
+.career .career__elements--piscine,
+.career .career__elements--christmas {
+  margin-top: 3rem;
 }
 
-.career .career__elements--piscine-detailed {
+.career .career__elements--avista-title {
+  margin-top: 23rem;
+}
+
+.career .career__elements--avista-title,
+.career .career__elements--piscine-title,
+.career .career__elements--christmas-title {
+  margin-bottom: 2rem;
+}
+.career .career__elements--avista-title span,
+.career .career__elements--piscine-title span,
+.career .career__elements--christmas-title span {
+  font-size: 12px;
+  margin-top: 0.5rem;
+}
+
+.career .career__elements--avista-detailed,
+.career .career__elements--piscine-detailed,
+.career .career__elements--christmas-detailed {
+  margin-left: 3rem;
   text-align: left;
 }
 
