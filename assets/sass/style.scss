@@ -57,7 +57,7 @@ main {
 }
 /*Partie main*/
 /*Profil*/
-.profile, .career {
+.profile, .career, .skills {
   position:relative;
   display: flex;
   flex-direction: column;
@@ -87,13 +87,14 @@ main {
   z-index: 2;
 }
 .profile .profile__links--network {
-    width: 40px;
-    margin: 1rem;
+  width: 40px;
+  margin: 1rem;
+  transition: transform .6s;
+  &:hover {
+    transform: scale(1.2);
+  }
 }
 /*Parcours*/
-.career {
-  
-}
 .career h2 {
   position: absolute;
   font-size: 30px;
@@ -111,7 +112,7 @@ main {
   margin-top: 3rem;
 }
 .career .career__elements--avista-title {
-  margin-top: 23rem;
+  margin-top: 25rem;
 }
 .career .career__elements--avista-title,
 .career .career__elements--piscine-title,
@@ -127,4 +128,24 @@ main {
 .career .career__elements--christmas-detailed {
   margin-left: 3rem;
   text-align: left;
+}
+/*Compétences*/
+.skills .skills__elements {
+  position: absolute;
+  width: 70%;
+  top: 0;
+  margin-top: 13rem;
+  h2 {
+    font-size: 30px;
+    margin-bottom: 5rem;
+  }
+}  
+.skills .skills__elements--logos {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  img {
+    width: 120px;
+    margin: 1rem 2rem;
+  }
 }

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Roboto:wght@400;500;700&display=swap");
 * {
   font-family: "Inter", Verdana, Helvetica, sans-serif;
@@ -59,7 +60,7 @@ main {
 
 /*Partie main*/
 /*Profil*/
-.profile, .career {
+.profile, .career, .skills {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -94,6 +95,10 @@ main {
 .profile .profile__links--network {
   width: 40px;
   margin: 1rem;
+  transition: transform 0.6s;
+}
+.profile .profile__links--network:hover {
+  transform: scale(1.2);
 }
 
 /*Parcours*/
@@ -117,7 +122,7 @@ main {
 }
 
 .career .career__elements--avista-title {
-  margin-top: 23rem;
+  margin-top: 25rem;
 }
 
 .career .career__elements--avista-title,
@@ -137,6 +142,28 @@ main {
 .career .career__elements--christmas-detailed {
   margin-left: 3rem;
   text-align: left;
+}
+
+/*Compétences*/
+.skills .skills__elements {
+  position: absolute;
+  width: 70%;
+  top: 0;
+  margin-top: 13rem;
+}
+.skills .skills__elements h2 {
+  font-size: 30px;
+  margin-bottom: 5rem;
+}
+
+.skills .skills__elements--logos {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.skills .skills__elements--logos img {
+  width: 120px;
+  margin: 1rem 2rem;
 }
 
 /*# sourceMappingURL=style.css.map */
