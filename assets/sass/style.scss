@@ -148,9 +148,8 @@ span {
 /*Footer*/
 .footer {
   text-align: center;
-  position: fixed;
   width: 100%;
-  height: 5vh;
+  height: 3vh;
   bottom: 0;
   display: flex;
   flex-direction: column;
@@ -158,22 +157,25 @@ span {
   justify-content: center;
 }
 .footer .footer__links {
-  width: 100%;
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  z-index: 3;
 }
 .footer .footer__links--network {
-  margin-left: 1rem;
-}
-.footer .footer__links--network img {
-  margin-bottom: 10rem;
-  width: 2.5rem;
+  margin: 0 1rem 8rem 1rem;
+  width: 2rem;
   height: auto;
   transition: transform .6s;
   &:hover {
-    transform: scale(1.1);
+    transform: scale(1.2);
   }
 }
 .footer .footer__contact {
-  width: 20%;
+  position: fixed;
+  font-size: 12px;
+  width: 15%;
   display: flex;
   flex-direction: row;
+  z-index: 3;
 }
