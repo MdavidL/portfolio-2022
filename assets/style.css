@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Roboto:wght@400;500;700&display=swap");
 *, body {
   font-family: "Inter", Verdana, Helvetica, sans-serif;
@@ -19,7 +20,7 @@ main {
 
 section {
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
   scroll-snap-align: start;
 }
 section img {
@@ -62,8 +63,7 @@ section img {
 
 /*Main:*/
 /*partie profil*/
-.profile {
-  min-height: 100vh;
+.profile, .career, .skills {
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -75,44 +75,130 @@ section img {
   position: absolute;
   width: 50%;
   top: 0;
-  margin-top: 20rem;
+  margin-top: 10rem;
 }
 .profile .profile__elements h2 {
   font-size: 30px;
-  margin-bottom: 5rem;
 }
-.profile .profile__elements h2 p {
-  margin-top: 5rem;
+
+.profile .profile__elements p {
+  margin-bottom: 10rem;
 }
 
 .profile .profile__elements--arrow img {
   width: 1.3rem;
   height: auto;
-  margin-bottom: 3rem;
+  margin-bottom: 25rem;
 }
 
-.profile .profile__links {
-  position: fixed;
-  margin-bottom: 4rem;
+/*partie parcours*/
+.career h2 {
+  position: absolute;
+  font-size: 30px;
+  top: 0;
+  margin-top: 10rem;
+}
+
+.career .career__elements {
+  position: absolute;
+  width: 60%;
+  height: 50%;
+  overflow-y: scroll;
+  z-index: 3;
+}
+
+.career .career__elements--avista {
+  height: 1.5rem;
+  margin-top: 22rem;
+}
+
+.career .career__elements--piscine {
+  height: 1.5rem;
+  margin-top: 18rem;
+}
+
+.career .career__elements--christmas {
+  height: 1.5rem;
+  margin-top: 20rem;
+}
+
+.career .career__elements--avista-title,
+.career .career__elements--piscine-title,
+.career .career__elements--christmas {
+  margin-bottom: 1rem;
+}
+.career .career__elements--avista-title span,
+.career .career__elements--piscine-title span,
+.career .career__elements--christmas span {
+  font-size: 12px;
+  margin-top: 0.5rem;
+}
+
+.career .career__elements--avista-detailed,
+.career .career__elements--piscine-detailed,
+.career .career__elements--christmas-detailed {
+  margin: 2rem 0 0 3rem;
+  text-align: left;
+}
+
+/*partie compétences*/
+.skills .skills__elements {
+  position: absolute;
+  height: 50%;
+  z-index: 3;
+}
+.skills .skills__elements h2 {
+  font-size: 30px;
+}
+
+.skills .skills__elements--dev,
+.skills .skills__elements--adobe {
   display: flex;
   flex-direction: row;
-  z-index: 2;
+  flex-wrap: wrap;
+}
+.skills .skills__elements--dev img,
+.skills .skills__elements--adobe img {
+  width: 96px;
+  height: auto;
+  margin: 2rem 3rem 7rem;
 }
 
-.profile .profile__links--network {
+/*Footer*/
+.footer {
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  height: 5vh;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer .footer__links {
+  width: 100%;
+}
+
+.footer .footer__links--network {
+  margin-left: 1rem;
+}
+
+.footer .footer__links--network img {
+  margin-bottom: 10rem;
   width: 2.5rem;
   height: auto;
-  margin: 0 1rem;
   transition: transform 0.6s;
 }
-.profile .profile__links--network:hover {
+.footer .footer__links--network img:hover {
   transform: scale(1.1);
 }
 
-footer {
-  position: fixed;
-  width: 100%;
-  z-index: 3;
+.footer .footer__contact {
+  width: 20%;
+  display: flex;
+  flex-direction: row;
 }
 
 /*# sourceMappingURL=style.css.map */
