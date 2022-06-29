@@ -80,17 +80,34 @@ section img {
 .profile .profile__elements h2 {
   font-size: 30px;
 }
-
 .profile .profile__elements p {
-  margin-bottom: 10rem;
+  margin-bottom: 3rem;
 }
 
-.profile .profile__elements--arrow img {
-  width: 1.3rem;
-  height: auto;
-  margin-bottom: 25rem;
+/*Flèche vers le bas*/
+.profile .profile__arrow-down {
+  margin-bottom: 20rem;
+  animation: arr 2s infinite;
+  z-index: 1;
+}
+.profile .profile__arrow-down div:before {
+  content: "";
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  border-top: 2px solid rgb(85, 85, 85);
+  border-right: 2px solid rgb(85, 85, 85);
+  transform: rotate(135deg);
 }
 
+@keyframes arr {
+  30%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(30px);
+  }
+}
 /*partie parcours*/
 .career h2 {
   position: absolute;
@@ -104,7 +121,7 @@ section img {
   width: 60%;
   height: 50%;
   overflow-y: scroll;
-  z-index: 3;
+  z-index: 1;
 }
 
 .career .career__elements--avista {
@@ -142,13 +159,17 @@ section img {
 }
 
 /*partie compétences*/
+.skills h2 {
+  position: absolute;
+  font-size: 30px;
+  top: 0;
+  margin-top: 10rem;
+}
+
 .skills .skills__elements {
   position: absolute;
   height: 50%;
-  z-index: 3;
-}
-.skills .skills__elements h2 {
-  font-size: 30px;
+  z-index: 1;
 }
 
 .skills .skills__elements--dev,
@@ -161,7 +182,7 @@ section img {
 .skills .skills__elements--adobe img {
   width: 96px;
   height: auto;
-  margin: 2rem 3rem 7rem;
+  margin: 2rem 3rem 2rem;
 }
 
 /*Footer*/
@@ -180,11 +201,11 @@ section img {
   position: fixed;
   display: flex;
   flex-direction: row;
-  z-index: 3;
+  z-index: 1;
 }
 
 .footer .footer__links--network {
-  margin: 0 1rem 8rem 1rem;
+  margin: 0 1rem 7rem 1rem;
   width: 2rem;
   height: auto;
   transition: transform 0.6s;
@@ -196,10 +217,16 @@ section img {
 .footer .footer__contact {
   position: fixed;
   font-size: 12px;
-  width: 15%;
+  width: 17%;
   display: flex;
   flex-direction: row;
-  z-index: 3;
+  z-index: 1;
+}
+.footer .footer__contact span {
+  min-width: 7rem;
+}
+.footer .footer__contact a:hover {
+  font-weight: 600;
 }
 
 /*# sourceMappingURL=style.css.map */

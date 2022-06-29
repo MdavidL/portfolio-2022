@@ -4,7 +4,7 @@
 
 *, body {
   font-family: "Inter", Verdana, Helvetica, sans-serif;
-  color: rgba(85, 85, 85, 1);
+  color: $main-color-font;
   width: 100%;
   height: 100%;
   margin: 0;
@@ -47,7 +47,7 @@ section {
   li {
     padding: 2rem;
     a {
-      font-size: 12px;
+      font-size: $main-font-size;
       color: rgba(0, 0, 0, 1);
       padding: .7rem;
     }
@@ -61,11 +61,7 @@ section {
 /*Main:*/
 /*partie profil*/
 .profile, .career, .skills {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include block-section;
 }
 .profile .profile__elements {
   position: absolute;
@@ -75,32 +71,50 @@ section {
   h2 {
     font-size: 30px;
   }
+  p {
+    margin-bottom: 3rem;
+  }
 }
-.profile .profile__elements p {
- margin-bottom: 10rem;
-}
-.profile .profile__elements--arrow img {
-  width: 1.3rem;
-  height: auto;
-  margin-bottom: 25rem;
-}
+/*Flèche vers le bas*/
+.profile .profile__arrow-down {
+  margin-bottom: 20rem;
+  animation: arr 2s infinite;
+  z-index: 1;
+  div:before { 
+      content:"";
+      position:absolute;
+      width: 1rem;
+      height: 1rem;
+      border-top:2px solid $main-color-font;
+      border-right:2px solid $main-color-font;
+      transform:rotate(135deg);
+    }
+  }
+  @keyframes arr {
+    30%,100%{
+      transform:translateY(0px);
+    }
+    50%{
+      transform:translateY(30px);
+    }
+  }
 /*partie parcours*/
 .career h2 {
-    position: absolute;
-    font-size: 30px;
-    top: 0;
-    margin-top: 10rem;
+  position: absolute;
+  font-size: 30px;
+  top: 0;
+  margin-top: 10rem;
 }
 .career .career__elements {
   position: absolute;
   width: 60%;
   height: 50%;
   overflow-y: scroll;
-  z-index: 3;
+  z-index: 1;
 }
 .career .career__elements--avista {
-height: 1.5rem;
-margin-top: 22rem;
+  height: 1.5rem;
+  margin-top: 22rem;
 }
 .career .career__elements--piscine {
   height: 1.5rem;
@@ -113,9 +127,9 @@ margin-top: 22rem;
 .career .career__elements--avista-title,
 .career .career__elements--piscine-title,
 .career .career__elements--christmas {
-margin-bottom: 1rem;
+  margin-bottom: 1rem;
 span {
-  font-size: 12px;
+  font-size: $main-font-size;
   margin-top: .5rem;
   }
 }
@@ -126,13 +140,16 @@ span {
   text-align: left;
 }
 /*partie compétences*/
+.skills h2 {
+  position: absolute;
+  font-size: 30px;
+  top: 0;
+  margin-top: 10rem;
+}
 .skills .skills__elements {
   position: absolute;
   height: 50%;
-  z-index: 3;
-  h2 {
-    font-size: 30px;
-  }
+  z-index: 1;
 }
 .skills .skills__elements--dev, 
 .skills .skills__elements--adobe {
@@ -142,7 +159,7 @@ span {
   img {
     width: 96px;
     height: auto;
-    margin: 2rem 3rem 7rem;
+    margin: 2rem 3rem 2rem;
   }
 }
 /*Footer*/
@@ -160,10 +177,10 @@ span {
   position: fixed;
   display: flex;
   flex-direction: row;
-  z-index: 3;
+  z-index: 1;
 }
 .footer .footer__links--network {
-  margin: 0 1rem 8rem 1rem;
+  margin: 0 1rem 7rem 1rem;
   width: 2rem;
   height: auto;
   transition: transform .6s;
@@ -173,9 +190,15 @@ span {
 }
 .footer .footer__contact {
   position: fixed;
-  font-size: 12px;
-  width: 15%;
+  font-size: $main-font-size;
+  width: 17%;
   display: flex;
   flex-direction: row;
-  z-index: 3;
+  z-index: 1;
+  span {
+    min-width: 7rem;
+  }
+  a:hover {
+    font-weight: 600;
+  }
 }
