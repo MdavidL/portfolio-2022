@@ -36,12 +36,12 @@ section img {
 }
 .header h1 {
   font-weight: 600;
-  font-size: 15px;
+  font-size: 18px;
   margin: 2rem 4rem;
 }
 
 .header .header__elements--navbar ul {
-  max-width: 40rem;
+  width: 40rem;
   display: flex;
 }
 .header .header__elements--navbar ul li {
@@ -49,14 +49,15 @@ section img {
   padding-top: 2rem;
 }
 .header .header__elements--navbar ul li a {
-  font-size: 12px;
-  color: rgb(0, 0, 0);
+  font-size: 15px;
+  color: rgb(85, 85, 85);
   padding: 0.7rem;
 }
 .header .header__elements--navbar ul li a:hover {
   background-color: rgba(75, 75, 75, 0.1);
   border-radius: 50px;
-  transition: 0.8s ease-out;
+  transition: 0.8s;
+  transition-delay: 0.1s;
 }
 
 /*Main:*/
@@ -106,6 +107,46 @@ section img {
     transform: translateY(30px);
   }
 }
+/*Sidebar*/
+.sidebar {
+  position: absolute;
+  background-color: rgb(245, 245, 245);
+  width: 20rem;
+  height: 100vh;
+  right: 0;
+  box-shadow: -5px 0px 15px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+.sidebar img {
+  width: 0.8rem;
+  height: auto;
+  margin: 2rem 0 0 13rem;
+  z-index: 2;
+}
+.sidebar ul {
+  height: 4rem;
+  margin-top: 4rem;
+  text-align: left;
+}
+.sidebar a {
+  position: absolute;
+  font-size: 15px;
+  background-color: rgb(245, 245, 245);
+  padding-left: 1rem;
+  width: 15rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+}
+.sidebar a:hover {
+  position: absolute;
+  background-color: rgba(134, 134, 134, 0.1);
+  margin: 0 2rem 2rem 0;
+  border-radius: 50px;
+  transition: 0.8s;
+  transition-delay: 0.1s;
+}
+
 /*partie parcours*/
 .career h2 {
   position: absolute;
@@ -252,11 +293,17 @@ section img {
     margin-top: 7rem;
   }
   .career .career__elements {
+    width: 87%;
     height: 60%;
     margin-top: 4rem;
   }
   .skills h2 {
     margin-top: 7rem;
+  }
+  .skills .skills__elements--dev img,
+.skills .skills__elements--adobe img {
+    width: 75px;
+    margin: 1rem 2rem 1rem;
   }
 }
 
