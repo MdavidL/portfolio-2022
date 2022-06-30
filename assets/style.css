@@ -31,24 +31,22 @@ section img {
 .header {
   position: fixed;
   display: flex;
-  flex-direction: row;
   justify-content: center;
   z-index: 1;
 }
 .header h1 {
   font-weight: 600;
   font-size: 15px;
-  margin: 2rem 0 0 4rem;
+  margin: 2rem 4rem;
 }
 
 .header .header__elements--navbar ul {
-  width: 35%;
+  max-width: 40rem;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
 }
 .header .header__elements--navbar ul li {
-  padding: 2rem;
+  text-align: center;
+  padding-top: 2rem;
 }
 .header .header__elements--navbar ul li a {
   font-size: 12px;
@@ -118,15 +116,16 @@ section img {
 
 .career .career__elements {
   position: absolute;
-  width: 60%;
-  height: 50%;
+  width: 73%;
+  height: 55%;
+  margin-top: 5rem;
   overflow-y: scroll;
   z-index: 1;
 }
 
 .career .career__elements--avista {
   height: 1.5rem;
-  margin-top: 22rem;
+  margin-top: 27rem;
 }
 
 .career .career__elements--piscine {
@@ -227,6 +226,38 @@ section img {
 }
 .footer .footer__contact a:hover {
   font-weight: 600;
+}
+
+/*Media Queries*/
+@media screen and (max-width: 1200px) {
+  .header h1 {
+    margin: 2rem 2rem;
+  }
+  .header .header__elements--navbar ul {
+    max-width: 25rem;
+    display: flex;
+  }
+  .profile .profile__elements {
+    width: 70%;
+    margin-top: 10rem;
+  }
+  .profile .profile__elements h2 {
+    position: absolute;
+    margin-bottom: 6rem;
+  }
+  .profile .profile__elements p {
+    margin-top: 2rem;
+  }
+  .career h2 {
+    margin-top: 7rem;
+  }
+  .career .career__elements {
+    height: 60%;
+    margin-top: 4rem;
+  }
+  .skills h2 {
+    margin-top: 7rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
