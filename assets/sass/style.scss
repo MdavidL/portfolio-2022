@@ -30,19 +30,23 @@ section {
 .header {
   position: fixed;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   z-index: 1;
   h1 {
+    position: absolute;
     font-weight: 600;
     font-size: 18px;
-    margin: 2rem 4rem;
+    margin: 2rem 0 0 4rem;
+  }
+  ul {
+    width: 40rem;
+    display: flex;
   }
 }
-.header .header__elements--navbar ul {
-  width: 40rem;
-  display: flex;
+.header .header__elements--navbar-list {
   li {
     text-align: center;
+    margin-right: 2rem;
     padding-top: 2rem;
     a {
       font-size: 15px;
@@ -56,6 +60,10 @@ section {
      transition-delay: .1s;
     }
   }
+}
+.header .header__elements--navbar-menu {
+  margin: 2rem 0 0 70rem;
+  display: none;
 }
 /*Main:*/
 /*partie profil*/
@@ -106,19 +114,13 @@ section {
   right: 0;
   box-shadow: -5px 0px 15px rgba(0, 0, 0, .1);
   z-index: 2;
-  img {
-    width: .8rem;
-    height: auto;
-    margin: 2rem 0 0 13rem;
-    z-index: 2;
-  }
+  display: none;
   ul {
     height: 4rem;
     margin-top: 4rem;
     text-align: left;
   }
   a {
-    position: absolute;
     font-size: 15px;
     background-color: rgba(245, 245, 245, 1);
     padding-left: 1rem;
@@ -128,13 +130,20 @@ section {
     align-items: center;
   } 
   a:hover {
-    position: absolute;
     background-color: rgba(134, 134, 134, 0.1);
     margin: 0 2rem 2rem 0;
     border-radius: 50px;
     transition: .8s;
     transition-delay: .1s;
    }
+}
+.sidebar__cross {
+  position: absolute;
+  font-size: 15px;
+  width: .8rem;
+  height: auto;
+  margin: 2rem 0 0 8rem;
+  cursor: pointer;
 }
 /*partie parcours*/
 .career h2 {
@@ -245,12 +254,21 @@ span {
 @media screen and (max-width: 1200px) {
 
   .header h1 {
-     margin: 2rem 2rem;
-    }
-  .header .header__elements--navbar ul {
-    max-width: 25rem;
-    display: flex;
-    }
+    margin: 2rem 0 0 5rem;
+  }
+  .header .header__elements--navbar-list ul {
+    display: none;
+  }
+  .header .header__elements--navbar-menu {
+    position: absolute;
+    width: 4rem;
+    height: 1.4rem;
+    margin: 2rem 0 0 55rem;
+    text-align: center;
+    display: block;
+    background-color: rgba(75, 75, 75, 0.1);
+    border-radius: 50px;
+  }
   .profile .profile__elements {
     width: 70%;
     margin-top: 10rem;
