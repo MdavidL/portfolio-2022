@@ -15,62 +15,63 @@ menuBtnProfile.addEventListener('click', () => {
         return false;
     }
     
-    document.addEventListener('keydown', preventKeyBoardScroll, false);
-    
-    function preventKeyBoardScroll(e) {
-        var keys = [32, 33, 34, 35, 37, 38, 39, 40];
-        if (keys.includes(e.keyCode)) {
-            e.preventDefault();
-            return false;
+    var arrow_keys_handler = function(e) {
+        switch(e.code){
+            case "ArrowUp": case "ArrowDown": case "ArrowLeft": case "ArrowRight": 
+                case "Space": e.preventDefault(); break;
+            default: break; // do not block other keys
         }
-    }
+    };
+    window.addEventListener("keydown", arrow_keys_handler, false);
 })
-// A chaque fois que l'on clique sur la croix
-//ferme la sidebar, débloque le scroll et enlève le flou.
+
 crossProfileClosed.addEventListener('click', () => {
-    document.querySelector(".sidebar__profile").style.display = "none";
-    document.querySelector(".sidebar__career").style.display = "none";
-    document.querySelector(".header h1").style.filter = "none";
-    document.querySelector(".profile .profile__elements").style.filter = "none";
-    document.querySelector(".footer").style.filter = "none";
-    document.querySelector("body").addEventListener('wheel', preventCancelableEvents, true);
-
-
-    function preventCancelableEvents(e) {
-        e.preventDefault();
-        e.stopPropagation();
-    
-        return true;
-    }
-
-    document.addEventListener('keydown', preventKeyBoardScroll, true);
-
-    function preventKeyBoardScroll(e) {
-    var keys = [32, 33, 34, 35, 37, 38, 39, 40];
-    if (keys.includes(e.keyCode)) {
-        e.preventDefault();
-        return true;
-        }
-    }
+    crossProfileClosed.addEventListener('click', location.reload(), false);
 })
-
-
-
-
-
 
 
 const menuBtnCareer = document.querySelector(".career .career__btn--menu");
 const crossCareerClosed = document.querySelector(".sidebar__career--cross");
 
-
-
 menuBtnCareer.addEventListener('click', () => {
     document.querySelector(".sidebar__career").style.display = "block";
- 
-})
+    document.querySelector(".header h1").style.filter = "blur(5px)";
+    document.querySelector(".career .career__elements").style.filter = "blur(5px)";
+    document.querySelector(".career h2").style.filter = "blur(5px)";
+    document.querySelector(".footer").style.filter = "blur(5px)";
+    document.querySelector("body").addEventListener('wheel', preventScroll, {passive: false});
+    
+    function preventScroll(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        
+        return false;
+    }
+    
+    var arrow_keys_handler = function(e) {
+        switch(e.code){
+            case "ArrowUp": case "ArrowDown": case "ArrowLeft": case "ArrowRight": 
+                case "Space": e.preventDefault(); break;
+            default: break; // do not block other keys
+        }
+    };
+    window.addEventListener("keydown", arrow_keys_handler, false);
+ })
 
 crossCareerClosed.addEventListener('click', () => {
-    document.querySelector(".sidebar__career").style.display = "none";
+    crossCareerClosed.addEventListener('click', location.reload(), false);
 })
 
+
+const menuBtnSkills = document.querySelector(".skills .skills__btn--menu");
+const crossSkillsClosed = document.querySelector(".sidebar__skills--cross");
+
+menuBtnSkills.addEventListener('click', () => {
+    document.querySelector(".sidebar__skills").style.display = "block";
+    document.querySelector(".header h1").style.filter = "blur(5px)";
+    document.querySelector(".footer").style.filter = "blur(5px)";
+})
+
+crossSkillsClosed.addEventListener('click', () => {
+    crossSkillsClosed.addEventListener('click', location.reload(), false);
+})

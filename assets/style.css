@@ -37,7 +37,7 @@ section img {
 .header h1 {
   position: absolute;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 1em;
   margin: 2rem 0 0 4rem;
 }
 .header ul {
@@ -51,7 +51,7 @@ section img {
   padding-top: 2rem;
 }
 .header .header__elements--navbar-list li a {
-  font-size: 15px;
+  font-size: 1em;
   color: rgb(85, 85, 85);
   padding: 0.7rem;
 }
@@ -80,7 +80,7 @@ section img {
   text-align: left;
 }
 .sidebar__profile a {
-  font-size: 15px;
+  font-size: 1em;
   background-color: rgb(245, 245, 245);
   padding-left: 1rem;
   width: 15rem;
@@ -98,7 +98,7 @@ section img {
 
 .sidebar__profile--cross {
   position: absolute;
-  font-size: 15px;
+  font-size: 1em;
   width: 0.8rem;
   height: auto;
   margin: 2rem 0 0 8rem;
@@ -121,7 +121,7 @@ section img {
   text-align: left;
 }
 .sidebar__career a {
-  font-size: 15px;
+  font-size: 1em;
   background-color: rgb(245, 245, 245);
   padding-left: 1rem;
   width: 15rem;
@@ -139,7 +139,48 @@ section img {
 
 .sidebar__career--cross {
   position: absolute;
-  font-size: 15px;
+  font-size: 1em;
+  width: 0.8rem;
+  height: auto;
+  margin: 2rem 0 0 8rem;
+  cursor: pointer;
+}
+
+.sidebar__skills {
+  position: absolute;
+  background-color: rgb(245, 245, 245);
+  width: 20rem;
+  height: 100vh;
+  right: 0;
+  box-shadow: -5px 0px 15px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+  display: none;
+}
+.sidebar__skills ul {
+  height: 4rem;
+  margin-top: 4rem;
+  text-align: left;
+}
+.sidebar__skills a {
+  font-size: 1em;
+  background-color: rgb(245, 245, 245);
+  padding-left: 1rem;
+  width: 15rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+}
+.sidebar__skills a:hover {
+  background-color: rgba(134, 134, 134, 0.1);
+  margin: 0 2rem 2rem 0;
+  border-radius: 50px;
+  transition: 0.8s;
+  transition-delay: 0.1s;
+}
+
+.sidebar__skills--cross {
+  position: absolute;
+  font-size: 1em;
   width: 0.8rem;
   height: auto;
   margin: 2rem 0 0 8rem;
@@ -180,7 +221,7 @@ section img {
   margin-top: 10rem;
 }
 .profile .profile__elements h2 {
-  font-size: 30px;
+  font-size: 2em;
 }
 .profile .profile__elements p {
   margin-bottom: 3rem;
@@ -213,7 +254,7 @@ section img {
 /*partie parcours*/
 .career h2 {
   position: absolute;
-  font-size: 30px;
+  font-size: 2em;
   top: 0;
   margin-top: 10rem;
 }
@@ -264,7 +305,7 @@ section img {
 /*partie compétences*/
 .skills h2 {
   position: absolute;
-  font-size: 30px;
+  font-size: 2em;
   top: 0;
   margin-top: 10rem;
 }
@@ -290,6 +331,7 @@ section img {
 
 /*Footer*/
 .footer {
+  position: fixed;
   text-align: center;
   width: 100%;
   height: 3vh;
@@ -298,32 +340,34 @@ section img {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  z-index: 3;
 }
 
-.footer .footer__links {
-  position: fixed;
-  display: flex;
-  flex-direction: row;
-  z-index: 1;
-}
-
-.footer .footer__links--network {
-  margin: 0 1rem 7rem 1rem;
+.footer .footer__links--github {
+  margin: 0 4rem 4rem 0;
   width: 2rem;
   height: auto;
   transition: transform 0.6s;
 }
-.footer .footer__links--network:hover {
+.footer .footer__links--github:hover {
+  transform: scale(1.2);
+}
+
+.footer .footer__links--linkedin {
+  margin: 0 0 4rem 4rem;
+  width: 2rem;
+  height: auto;
+  transition: transform 0.6s;
+}
+.footer .footer__links--linkedin:hover {
   transform: scale(1.2);
 }
 
 .footer .footer__contact {
-  position: fixed;
   font-size: 12px;
   width: 17%;
   display: flex;
   flex-direction: row;
-  z-index: 1;
 }
 .footer .footer__contact span {
   min-width: 7rem;

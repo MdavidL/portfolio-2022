@@ -35,7 +35,7 @@ section {
   h1 {
     position: absolute;
     font-weight: 600;
-    font-size: 18px;
+    font-size: 1em;
     margin: 2rem 0 0 4rem;
   }
   ul {
@@ -49,7 +49,7 @@ section {
     margin-right: 2rem;
     padding-top: 2rem;
     a {
-      font-size: 15px;
+      font-size: 1em;
       color: $main-color-font;
       padding: .7rem;
     }
@@ -78,7 +78,7 @@ section {
     text-align: left;
   }
   a {
-    font-size: 15px;
+    font-size: 1em;
     background-color: rgba(245, 245, 245, 1);
     padding-left: 1rem;
     width: 15rem;
@@ -96,7 +96,7 @@ section {
 }
 .sidebar__profile--cross {
   position: absolute;
-  font-size: 15px;
+  font-size: 1em;
   width: .8rem;
   height: auto;
   margin: 2rem 0 0 8rem;
@@ -117,7 +117,7 @@ section {
     text-align: left;
   }
   a {
-    font-size: 15px;
+    font-size: 1em;
     background-color: rgba(245, 245, 245, 1);
     padding-left: 1rem;
     width: 15rem;
@@ -135,7 +135,46 @@ section {
 }
 .sidebar__career--cross {
   position: absolute;
-  font-size: 15px;
+  font-size: 1em;
+  width: .8rem;
+  height: auto;
+  margin: 2rem 0 0 8rem;
+  cursor: pointer;
+}
+.sidebar__skills {
+  position: absolute;
+  background-color: rgba(245, 245, 245, 1);
+  width: 20rem;
+  height: 100vh;
+  right: 0;
+  box-shadow: -5px 0px 15px rgba(0, 0, 0, .1);
+  z-index: 2;
+  display: none;
+  ul {
+    height: 4rem;
+    margin-top: 4rem;
+    text-align: left;
+  }
+  a {
+    font-size: 1em;
+    background-color: rgba(245, 245, 245, 1);
+    padding-left: 1rem;
+    width: 15rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+  } 
+  a:hover {
+    background-color: rgba(134, 134, 134, 0.1);
+    margin: 0 2rem 2rem 0;
+    border-radius: 50px;
+    transition: .8s;
+    transition-delay: .1s;
+   }
+}
+.sidebar__skills--cross {
+  position: absolute;
+  font-size: 1em;
   width: .8rem;
   height: auto;
   margin: 2rem 0 0 8rem;
@@ -166,7 +205,7 @@ section {
   top: 0;
   margin-top: 10rem;
   h2 {
-    font-size: 30px;
+    font-size: 2em;
   }
   p {
     margin-bottom: 3rem;
@@ -198,7 +237,7 @@ section {
 /*partie parcours*/
 .career h2 {
   position: absolute;
-  font-size: 30px;
+  font-size: 2em;
   top: 0;
   margin-top: 10rem;
 }
@@ -240,7 +279,7 @@ span {
 /*partie compétences*/
 .skills h2 {
   position: absolute;
-  font-size: 30px;
+  font-size: 2em;
   top: 0;
   margin-top: 10rem;
 }
@@ -262,6 +301,7 @@ span {
 }
 /*Footer*/
 .footer {
+  position: fixed;
   text-align: center;
   width: 100%;
   height: 3vh;
@@ -270,15 +310,19 @@ span {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  z-index: 3;
 }
-.footer .footer__links {
-  position: fixed;
-  display: flex;
-  flex-direction: row;
-  z-index: 1;
+.footer .footer__links--github {
+  margin: 0 4rem 4rem 0;
+  width: 2rem;
+  height: auto;
+  transition: transform .6s;
+  &:hover {
+    transform: scale(1.2);
+  }
 }
-.footer .footer__links--network {
-  margin: 0 1rem 7rem 1rem;
+.footer .footer__links--linkedin {
+  margin: 0 0 4rem 4rem;
   width: 2rem;
   height: auto;
   transition: transform .6s;
@@ -287,12 +331,10 @@ span {
   }
 }
 .footer .footer__contact {
-  position: fixed;
   font-size: $main-font-size;
   width: 17%;
   display: flex;
   flex-direction: row;
-  z-index: 1;
   span {
     min-width: 7rem;
   }
