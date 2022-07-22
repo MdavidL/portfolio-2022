@@ -69,7 +69,27 @@ const crossSkillsClosed = document.querySelector(".sidebar__skills--cross");
 menuBtnSkills.addEventListener('click', () => {
     document.querySelector(".sidebar__skills").style.display = "block";
     document.querySelector(".header h1").style.filter = "blur(5px)";
+    document.querySelector(".skills .skills__elements").style.filter = "blur(5px)";
+    document.querySelector(".skills h2").style.filter = "blur(5px)";
     document.querySelector(".footer").style.filter = "blur(5px)";
+    document.querySelector("body").addEventListener('wheel', preventScroll, {passive: false});
+    
+    function preventScroll(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        
+        return false;
+    }
+    
+    var arrow_keys_handler = function(e) {
+        switch(e.code){
+            case "ArrowUp": case "ArrowDown": case "ArrowLeft": case "ArrowRight": 
+                case "Space": e.preventDefault(); break;
+            default: break; // do not block other keys
+        }
+    };
+    window.addEventListener("keydown", arrow_keys_handler, false);
+ 
 })
 
 crossSkillsClosed.addEventListener('click', () => {
