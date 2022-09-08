@@ -35,7 +35,6 @@ section img {
   z-index: 1;
 }
 .header h1 {
-  position: absolute;
   font-weight: 600;
   font-size: 1em;
   margin: 2rem 0 0 4rem;
@@ -79,7 +78,7 @@ section img {
   margin-top: 4rem;
   text-align: left;
 }
-.sidebar__profile a {
+.sidebar__profile .sidebar__link {
   font-size: 1em;
   background-color: rgb(245, 245, 245);
   padding-left: 1rem;
@@ -88,7 +87,7 @@ section img {
   display: flex;
   align-items: center;
 }
-.sidebar__profile a:hover {
+.sidebar__profile .sidebar__link:hover {
   background-color: rgba(134, 134, 134, 0.1);
   margin: 0 2rem 2rem 0;
   border-radius: 50px;
@@ -120,7 +119,7 @@ section img {
   margin-top: 4rem;
   text-align: left;
 }
-.sidebar__career a {
+.sidebar__career .sidebar__link {
   font-size: 1em;
   background-color: rgb(245, 245, 245);
   padding-left: 1rem;
@@ -129,7 +128,7 @@ section img {
   display: flex;
   align-items: center;
 }
-.sidebar__career a:hover {
+.sidebar__career .sidebar__link:hover {
   background-color: rgba(134, 134, 134, 0.1);
   margin: 0 2rem 2rem 0;
   border-radius: 50px;
@@ -161,7 +160,7 @@ section img {
   margin-top: 4rem;
   text-align: left;
 }
-.sidebar__skills a {
+.sidebar__skills .sidebar__link {
   font-size: 1em;
   background-color: rgb(245, 245, 245);
   padding-left: 1rem;
@@ -170,7 +169,7 @@ section img {
   display: flex;
   align-items: center;
 }
-.sidebar__skills a:hover {
+.sidebar__skills .sidebar__link:hover {
   background-color: rgba(134, 134, 134, 0.1);
   margin: 0 2rem 2rem 0;
   border-radius: 50px;

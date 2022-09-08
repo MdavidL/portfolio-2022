@@ -15,7 +15,7 @@ menuBtnProfile.addEventListener('click', () => {
         return false;
     }
     
-    var arrow_keys_handler = function(e) {
+    const arrow_keys_handler = function(e) {
         switch(e.code){
             case "ArrowUp": case "ArrowDown": case "ArrowLeft": case "ArrowRight": 
                 case "Space": e.preventDefault(); break;
@@ -28,6 +28,15 @@ menuBtnProfile.addEventListener('click', () => {
 crossProfileClosed.addEventListener('click', () => {
     crossProfileClosed.addEventListener('click', location.reload(), false);
 })
+
+
+
+//document.querySelector(".sidebar__link").onclick = function () {
+    //function sidebarItemSelected() {
+        //document.querySelector(".footer").style.filter = "blur(1px)";
+    //}
+    //sidebarItemSelected();
+//};
 
 
 const menuBtnCareer = document.querySelector(".career .career__btn--menu");
@@ -48,7 +57,7 @@ menuBtnCareer.addEventListener('click', () => {
         return false;
     }
     
-    var arrow_keys_handler = function(e) {
+    const arrow_keys_handler = function(e) {
         switch(e.code){
             case "ArrowUp": case "ArrowDown": case "ArrowLeft": case "ArrowRight": 
                 case "Space": e.preventDefault(); break;
@@ -81,11 +90,11 @@ menuBtnSkills.addEventListener('click', () => {
         return false;
     }
     
-    var arrow_keys_handler = function(e) {
+    const arrow_keys_handler = function(e) {
         switch(e.code){
             case "ArrowUp": case "ArrowDown": case "ArrowLeft": case "ArrowRight": 
                 case "Space": e.preventDefault(); break;
-            default: break; // do not block other keys
+            default: break;
         }
     };
     window.addEventListener("keydown", arrow_keys_handler, false);
@@ -95,3 +104,4 @@ menuBtnSkills.addEventListener('click', () => {
 crossSkillsClosed.addEventListener('click', () => {
     crossSkillsClosed.addEventListener('click', location.reload(), false);
 })
+
